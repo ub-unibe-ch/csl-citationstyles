@@ -1,1 +1,1 @@
-# CSL citation styles for Uni Bern and PH Bern
+# CSL Zitierstile für PH Bern und Uni Bern
