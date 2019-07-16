@@ -122,6 +122,8 @@
     </choose>
   </macro>
   <macro name="author">
+    <choose>
+      <if locale="en">
         <names variable="author">
           <name delimiter="; " and="symbol" delimiter-precedes-et-al="never" delimiter-precedes-last="never"/>
           <label form="short" prefix=" (" suffix=")" text-case="capitalize-first"/>
@@ -139,6 +141,27 @@
             </choose>
           </substitute>
         </names>
+      </if>
+      <else>
+        <names variable="author">
+          <name delimiter="; " and="symbol" delimiter-precedes-et-al="never" delimiter-precedes-last="never"/>
+          <label form="short" prefix=" (" suffix=")" text-case="capitalize-first"/>
+          <substitute>
+            <names variable="editor"/>
+            <names variable="translator"/>
+            <choose>
+              <if type="report">
+                <text variable="publisher"/>
+                <text macro="title"/>
+              </if>
+              <else>
+                <text macro="title"/>
+              </else>
+            </choose>
+          </substitute>
+        </names>
+      </else>
+    </choose>
   </macro>
   <macro name="author-short">
     <choose>
