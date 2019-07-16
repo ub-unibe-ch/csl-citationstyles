@@ -50,6 +50,7 @@
         <multiple>eds. &amp; trans.</multiple>
       </term>
       <term name="translator" form="short">trans.</term>
+      <term name="and">und</term>
     </terms>
   </locale>
   <locale xml:lang="es">
