@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.1mlz1" and="symbol" page-range-format="expanded" demote-non-dropping-particle="never" default-locale="de">
   <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
   <info>
@@ -51,6 +51,7 @@
       </term>
       <term name="translator" form="short">trans.</term>
       <term name="and">und</term>
+      <term name="and" form="short">&amp;</term>
     </terms>
   </locale>
   <locale xml:lang="es">
@@ -569,10 +570,10 @@
       </else>
     </choose>
   </macro>
-  <macro name="locators">
+  <macro name="locators-punct">
     <choose>
       <if type="article-journal article-magazine" match="any">
-        <group delimiter=". " require="comma-safe">
+        <group delimiter=". ">
           <group delimiter=", ">
             <group font-style="italic" delimiter=" ">
               <number variable="volume" font-style="italic"/>
@@ -591,8 +592,12 @@
           </choose>
         </group>
       </if>
-      <else-if type="book graphic motion_picture report song chapter paper-conference entry-encyclopedia entry-dictionary" match="any">
-        <group prefix="(" suffix=")" delimiter=", " reject="comma-safe">
+    </choose>
+  </macro>
+  <macro name="locators-space">
+    <choose>
+      <if type="book graphic motion_picture report song chapter paper-conference entry-encyclopedia entry-dictionary" match="any">
+        <group prefix="(" suffix=")" delimiter=", ">
           <choose>
             <if type="report" match="none">
               <text macro="edition"/>
@@ -617,9 +622,9 @@
             <number variable="page"/>
           </group>
         </group>
-      </else-if>
+      </if>
       <else-if type="legal_case">
-        <group prefix="(" suffix=")" delimiter=" " reject="comma-safe">
+        <group prefix="(" suffix=")" delimiter=" ">
           <names variable="authority">
             <name/>
             <institution/>
@@ -635,7 +640,7 @@
         </group>
       </else-if>
       <else-if type="bill legislation" match="any">
-        <group reject="comma-safe">
+        <group>
           <date variable="issued" prefix="(" suffix=")">
             <date-part name="year"/>
           </date>
@@ -817,10 +822,10 @@
               <!-- join by comma -->
               <text macro="legal-cites"/>
               <!-- join by comma -->
-              <text macro="locators"/>
+              <text macro="locators-punct"/>
             </group>
             <!-- join by space -->
-            <text macro="locators"/>
+            <text macro="locators-space"/>
           </group>
           <!-- join by period -->
           <group delimiter=", " prefix=". ">
