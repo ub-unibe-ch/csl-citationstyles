@@ -41,6 +41,7 @@
   <locale xml:lang="de">
     <terms>
       <term name="et-al">et. al.</term>
+      <term name="and" form="symbol">&amp;</term>
     </terms>
   </locale>
   <locale xml:lang="en">
@@ -51,7 +52,7 @@
       </term>
       <term name="translator" form="short">trans.</term>
       <term name="and">und</term>
-      <term name="and" form="short">&amp;</term>
+      <term name="and" form="symbol">&amp;</term>
     </terms>
   </locale>
   <locale xml:lang="es">
