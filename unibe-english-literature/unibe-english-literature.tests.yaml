@@ -1,0 +1,14 @@
+- describe: "Zitate"
+  tests:
+    - it: "Ein simples Citation Objekt"
+      single: { id: "halpernOurDriverlessFuture2016" }
+      # you can use > to join multiple lines with spaces if a line gets long
+      expect: "(Halpern)"
+ 
+- describe: "bibliography tests"
+  tests:
+    - it: "Bib: Webpage"
+      bibliography:
+      - [{ id: "halpernOurDriverlessFuture2016" }]
+      expect:
+      - "Halpern, Sue. “Our Driverless Future.” <i>The New York Review of Books</i>. [online journal] 24 Nov 2016. Accessed: 7 Dec 2016. www.nybooks.com."

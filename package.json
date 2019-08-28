@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test": "jest --noStackTrace",
+    "test-unibe-english-literature": "jest --watchAll --noStackTrace ./unibe-english-literature/unibe-english-literature.test.js"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "jest-csl": "^0.3.1"
+  },
+  "dependencies": {
+    "citeproc": "^2.2.16"
+  }
+}
