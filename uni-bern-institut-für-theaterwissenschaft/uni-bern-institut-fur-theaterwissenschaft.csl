@@ -29,7 +29,7 @@
       <text macro="locator"/>
     </group>
   </macro>
-  <macro name="cite-ibid">
+  <macro name="ibid">
     <text term="ibid" form="short"/>
   </macro>
   <macro name="author_title-citations">
@@ -660,7 +660,7 @@
             <text macro="bib-layout"/>
           </if>
           <else-if match="any" position="ibid ibid-with-locator">
-            <text term="ibid" form="short"/>
+            <text macro="ibid"/>
           </else-if>
           <else>
             <choose>
