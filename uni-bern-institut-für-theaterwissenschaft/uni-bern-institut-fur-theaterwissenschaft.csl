@@ -505,14 +505,10 @@
     </group>
   </macro>
   <macro name="locator">
-    <choose>
-      <if match="none" position="ibid">
         <group delimiter=" ">
           <label variable="locator" form="short"/>
           <text variable="locator"/>
         </group>
-      </if>
-    </choose>
   </macro>
   <macro name="locator-here">
     <group delimiter=" ">
